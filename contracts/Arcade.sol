@@ -65,9 +65,10 @@ contract Arcade is Owned {
     }
 
     function register(uint game_id) public payable {
+        require(msg.value == gameData[game_id].registration_fee, "Not enough registration fee");
         require(gameData[game_id].fee[msg.sender] <= 0, "Already registered");
         require(gameData[game_id].player_limit > 0, "Game not found");
-        require(msg.value >= gameData[game_id].registration_fee, "Not enough registration fee");
+        require((gameData[game_id].registration_fee * gameData[game_id].player_limit) < gameData[game_id].total_fee, "Game is full");
 
         gameData[game_id].fee[msg.sender] = msg.value;
         gameData[game_id].total_fee += msg.value;
