@@ -20,14 +20,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/TrophyKing/tk-smart-contracts.git"
+        "url": "git+https://github.com/zeus16/tron_game_sol.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/TrophyKing/tk-smart-contracts/issues"
+        "url": "https://github.com/zeus16/tron_game_sol/issues"
     },
-    "homepage": "https://github.com/TrophyKing/tk-smart-contracts#readme",
+    "homepage": "https://github.com/zeus16/tron_game_sol#readme",
     "prettier": {
         "arrowParens": "always",
         "bracketSpacing": true,
